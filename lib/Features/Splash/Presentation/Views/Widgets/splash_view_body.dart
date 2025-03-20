@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:music_app/Core/Utils/Controller/splash_controller.dart';
+import 'package:music_app/Core/Controller/splash_controller.dart';
 
 import 'package:music_app/Core/Utils/assets.dart';
 import 'package:music_app/Features/Splash/Presentation/Views/Widgets/sliding_text.dart';
