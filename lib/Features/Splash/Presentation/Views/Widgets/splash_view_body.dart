@@ -18,7 +18,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     initSlidingAnimation();
-    SplashController.navigateToHomeView(context);
+    SplashController.navigateToOnBoardingViewView(context);
     super.initState();
   }
 
