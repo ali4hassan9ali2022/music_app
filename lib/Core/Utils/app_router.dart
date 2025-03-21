@@ -9,7 +9,7 @@ abstract class AppRouter {
       GoRoute(path: "/", builder: (context, state) => SplashView()),
       GoRoute(
         path: kOnBoardingView,
-        builder: (context, state) => OnBoaedingView(),
+        builder: (context, state) => OnBoardingView(),
       ),
     ],
   );
