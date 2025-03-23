@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/Core/Utils/app_styles.dart';
+import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_songs_details_list_view.dart';
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_text_field.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -7,27 +8,23 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        const SliverToBoxAdapter(child: SizedBox(height: 55)),
-        const SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.only(left: 31, right: 33),
-            child: CustomTextField(),
+    return Column(
+      children: [
+        const SizedBox(height: 55),
+        const Padding(
+          padding: EdgeInsets.only(left: 31, right: 33),
+          child: CustomTextField(),
+        ),
+        const SizedBox(height: 32),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 34),
+          child: Text(
+            "Recently Played",
+            style: AppStyles.styleMedium18(context),
           ),
         ),
-        const SliverToBoxAdapter(child: SizedBox(height: 32)),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 34),
-            child: Text(
-              "Recently Played",
-              style: AppStyles.styleMedium18(context),
-            ),
-          ),
-        ),
-        const SliverToBoxAdapter(child: SizedBox(height: 32)),
-        
+        const SizedBox(height: 32),
+        const CustomSongsDetailsListView(),
       ],
     );
   }

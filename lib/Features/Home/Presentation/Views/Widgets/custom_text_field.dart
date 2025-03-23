@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/Core/Utils/app_colors.dart';
 import 'package:music_app/Core/Utils/app_styles.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -9,15 +10,21 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         filled: true,
-        fillColor: const Color(0xffB1AFE9),
+        fillColor: AppColors.kB1lueColor,
         prefixIcon: const Padding(
           padding: EdgeInsets.only(left: 24, right: 4),
           child: Icon(Icons.search, color: Colors.white, size: 17),
         ),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+        border: outlineInputBorder(),
+        enabledBorder: outlineInputBorder(),
+        focusedBorder: outlineInputBorder(),
         hintText: "Search Song",
         hintStyle: AppStyles.styleRegular12(context),
       ),
     );
   }
+}
+
+OutlineInputBorder outlineInputBorder() {
+  return OutlineInputBorder(borderRadius: BorderRadius.circular(50));
 }
