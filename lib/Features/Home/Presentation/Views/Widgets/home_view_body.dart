@@ -1,30 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/Core/Utils/app_styles.dart';
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_songs_details_list_view.dart';
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_text_field.dart';
+import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_text_home_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 55),
-        const Padding(
+        SizedBox(height: 55),
+        Padding(
           padding: EdgeInsets.only(left: 31, right: 33),
           child: CustomTextField(),
         ),
-        const SizedBox(height: 32),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 34),
-          child: Text(
-            "Recently Played",
-            style: AppStyles.styleMedium18(context),
-          ),
-        ),
-        const SizedBox(height: 32),
-        const CustomSongsDetailsListView(),
+        SizedBox(height: 32),
+        CustomTestHomeView(text: "Recently Played"),
+        SizedBox(height: 32),
+        CustomSongsDetailsListView(),
+        SizedBox(height: 31),
+        CustomTestHomeView(text: "Recommanded music"),
       ],
     );
   }
