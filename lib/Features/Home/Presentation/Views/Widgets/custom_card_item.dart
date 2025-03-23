@@ -1,28 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/Core/Utils/app_styles.dart';
-import 'package:music_app/Core/Utils/assets.dart';
+import 'package:music_app/Features/Home/Data/Models/card_model.dart';
 
-class CustomCardItem extends StatelessWidget {
-  const CustomCardItem({super.key});
+class CustomCardItem extends StatefulWidget {
+  const CustomCardItem({
+    super.key,
+    required this.cardModel,
+  });
+  final CardModel cardModel;
 
+  @override
+  State<CustomCardItem> createState() => _CustomCardItemState();
+}
+
+class _CustomCardItemState extends State<CustomCardItem> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const CircleAvatar(
+      leading: CircleAvatar(
         radius: 35,
-        backgroundImage: AssetImage(Assets.imagesDJSNAKE),
+        backgroundImage: AssetImage(widget.cardModel.image),
       ),
-      title: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("magenta riddim", style: AppStyles.styleMedium15(context)),
-          const SizedBox(height: 4),
-          Text("magenta riddim", style: AppStyles.styleMedium12(context)),
-        ],
+      title: Text(widget.cardModel.title, style: AppStyles.styleMedium15(context)),
+      subtitle: Padding(
+        padding: const EdgeInsets.only(top: 4),
+        child: Text(
+          widget.cardModel.subTitle,
+          style: AppStyles.styleMedium12(context),
+        ),
       ),
       trailing: IconButton(
-        onPressed: () {},
-        icon: const Icon(Icons.favorite_outline, color: Colors.red),
+        onPressed: () {
+          widget.cardModel.isActive = true;
+        },
+        icon: Icon(
+          Icons.favorite_outline,
+          color: widget.cardModel.isActive ? Colors.red : Colors.white,
+        ),
       ),
     );
   }

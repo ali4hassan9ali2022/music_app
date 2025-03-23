@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_card_item.dart';
+
+
+
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_songs_details_list_view.dart';
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_text_field.dart';
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_text_home_view.dart';
@@ -24,8 +27,11 @@ class HomeViewBody extends StatelessWidget {
         SizedBox(height: 31),
         CustomTestHomeView(text: "Recommanded music"),
         SizedBox(height: 21),
-        CustomCardItem(),
       ],
     );
   }
+}
+
+class CustomCardListView {
+  const CustomCardListView();
 }
