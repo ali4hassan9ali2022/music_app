@@ -31,7 +31,15 @@ class _CustomCardItemState extends State<CustomCardItem> {
       ),
       trailing: IconButton(
         onPressed: () {
-          widget.cardModel.isActive = true;
+          if(widget.cardModel.isActive == true) {
+            setState(() {
+              widget.cardModel.isActive = false;
+            }); 
+          } else {
+            setState(() {
+              widget.cardModel.isActive = true;
+            });
+          }
         },
         icon: Icon(
           Icons.favorite_outline,
