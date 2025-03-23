@@ -11,15 +11,15 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   List<Widget> pages = [
+    const Scaffold(),
     const HomeView(),
-    const SizedBox(),
 
-    const SizedBox(),
-    const SizedBox(),
-    const SizedBox(),
+    const Scaffold(),
+    const Scaffold(),
+    const Scaffold(),
   ];
 
-  int selectIndex = 0;
+  int selectIndex = 1;
   late PageController pageController = PageController();
   void onItemTapped(int index) {
     setState(() {
@@ -36,6 +36,8 @@ class _MainViewState extends State<MainView> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         elevation: 0,
         unselectedIconTheme: const IconThemeData(color: Colors.white),
         selectedItemColor: AppColors.kThirdPrimaryColor,
@@ -44,12 +46,11 @@ class _MainViewState extends State<MainView> {
         currentIndex: selectIndex,
         onTap: onItemTapped,
         items: [
-          const BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
           const BottomNavigationBarItem(
             icon: Icon(Icons.align_horizontal_left),
             label: "",
           ),
-
+          const BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
           const BottomNavigationBarItem(
             icon: Icon(Icons.favorite_outline),
             label: "",
