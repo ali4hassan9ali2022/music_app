@@ -11,18 +11,18 @@ abstract class AppRouter {
   static final kMainView = "/MainView";
   static final router = GoRouter(
     routes: [
-      GoRoute(path: "/", builder: (context, state) => SplashView()),
+      GoRoute(path: "/", builder: (context, state) => const SplashView()),
       GoRoute(
         path: kOnBoardingView,
-        builder: (context, state) => OnBoardingView(),
+        builder: (context, state) => const OnBoardingView(),
       ),
       GoRoute(
         path: kHomeView,
-        builder: (context, state) => HomeView(),
+        builder: (context, state) => const HomeView(),
       ),
       GoRoute(
         path: kMainView,
-        builder: (context, state) => MainView(),
+        builder: (context, state) => const MainView(),
       ),
     ],
   );

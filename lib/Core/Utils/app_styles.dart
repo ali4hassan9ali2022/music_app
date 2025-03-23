@@ -8,7 +8,7 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 50),
       fontWeight: FontWeight.bold,
       fontFamily: "Orbitron",
-      color: Color(0xffffffff),
+      color: const Color(0xffffffff),
     );
   }
   static TextStyle styleMedium15(context) {
@@ -16,7 +16,7 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 15),
       fontWeight: FontWeight.w500,
       fontFamily: "Orbitron",
-      color: Color(0xffffffff),
+      color: const Color(0xffffffff),
     );
   }
   static TextStyle styleMedium18(context) {
@@ -24,7 +24,7 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontWeight: FontWeight.w500,
       fontFamily: "Orbitron",
-      color: Color(0xffffffff),
+      color: const Color(0xffffffff),
     );
   }
   static TextStyle styleRegular12(context) {
@@ -32,7 +32,7 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w400,
       fontFamily: "Orbitron",
-      color: Color(0xffffffff).withOpacity(0.6),
+      color: const Color(0xffffffff).withOpacity(0.6),
     );
   }
   static TextStyle styleMedium12(context) {

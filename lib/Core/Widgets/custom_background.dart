@@ -10,8 +10,8 @@ class CustomBackground extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: Alignment(0.2, -0.98),
-          end: Alignment(-0.2, 0.98),
+          begin: const Alignment(0.2, -0.98),
+          end: const Alignment(-0.2, 0.98),
           colors: [
             AppColors.kPrimaryColor,
             AppColors.kSecondPrimaryColor.withOpacity(0.54),

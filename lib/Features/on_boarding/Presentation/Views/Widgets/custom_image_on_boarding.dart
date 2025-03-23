@@ -10,7 +10,7 @@ class CustomImageOnBoarding extends StatelessWidget {
     return Expanded(
       child: Stack(
         children: [
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             child: Image(
               image: AssetImage(Assets.imagesOnBoardingImage),

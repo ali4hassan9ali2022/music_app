@@ -11,7 +11,7 @@ class OnBoardingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 111),
+        const SizedBox(height: 111),
         Text(
           "Find Your\nFavourite",
           style: AppStyles.styleBold50(context).copyWith(height: 1),
@@ -22,16 +22,16 @@ class OnBoardingViewBody extends StatelessWidget {
             context,
           ).copyWith(color: AppColors.kLight1BlueColor, height: 1),
         ),
-        SizedBox(height: 11),
+        const SizedBox(height: 11),
         Text(
           textAlign: TextAlign.center,
           "Find Your Latest Favourite Music\n From Our Collection",
           style: AppStyles.styleMedium15(context),
         ),
-        SizedBox(height: 58),
+        const SizedBox(height: 58),
 
-        CustomButton(),
-        CustomImageOnBoarding(),
+        const CustomButton(),
+        const CustomImageOnBoarding(),
       ],
     );
   }

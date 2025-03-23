@@ -14,7 +14,7 @@ class SlidingText extends StatelessWidget {
       animation: slidingAnimation,
       builder: (context, _) => SlideTransition(
         position: slidingAnimation,
-        child: Text(
+        child: const Text(
           "Welcome",
           style: TextStyle(
             fontSize: 24,

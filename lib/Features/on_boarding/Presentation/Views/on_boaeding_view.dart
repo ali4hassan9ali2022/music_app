@@ -7,6 +7,6 @@ class OnBoardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: CustomBackground(child: OnBoardingViewBody()));
+    return const Scaffold(body: CustomBackground(child: OnBoardingViewBody()));
   }
 }

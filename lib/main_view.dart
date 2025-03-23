@@ -11,12 +11,12 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   List<Widget> pages = [
-    HomeView(),
-    SizedBox(),
+    const HomeView(),
+    const SizedBox(),
 
-    SizedBox(),
-    SizedBox(),
-    SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
   ];
 
   int selectIndex = 0;
@@ -27,7 +27,7 @@ class _MainViewState extends State<MainView> {
     });
     pageController.animateToPage(
       index,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
     );
   }
@@ -37,25 +37,25 @@ class _MainViewState extends State<MainView> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
-        unselectedIconTheme: IconThemeData(color: Colors.white),
+        unselectedIconTheme: const IconThemeData(color: Colors.white),
         selectedItemColor: AppColors.kThirdPrimaryColor,
         backgroundColor: AppColors.kDarkBlueColor,
         type: BottomNavigationBarType.fixed,
         currentIndex: selectIndex,
         onTap: onItemTapped,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          const BottomNavigationBarItem(
             icon: Icon(Icons.align_horizontal_left),
             label: "",
           ),
 
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.favorite_outline),
             label: "",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: ""),
+          const BottomNavigationBarItem(icon: Icon(Icons.list), label: ""),
+          const BottomNavigationBarItem(icon: Icon(Icons.settings), label: ""),
         ],
       ),
       body: PageView.builder(
