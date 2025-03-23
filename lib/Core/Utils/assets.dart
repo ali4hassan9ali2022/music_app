@@ -2,9 +2,25 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAnneMarie 1
+  /// assets/images/anne-marie 1.svg
+  static const String imagesAnneMarie = "assets/images/anne-marie 1.svg";
+
   /// Assets for imagesBack
   /// assets/images/back.png
   static const String imagesBack = "assets/images/back.png";
+
+  /// Assets for imagesDJ SNAKE
+  /// assets/images/DJ SNAKE.png
+  static const String imagesDJSNAKE = "assets/images/DJ SNAKE.png";
+
+  /// Assets for imagesDJ SNAKE 1
+  /// assets/images/DJ SNAKE 1.svg
+  static const String imagesDJSNAKE1 = "assets/images/DJ SNAKE 1.svg";
+
+  /// Assets for imagesDuaLipa 1
+  /// assets/images/Dua-lipa 1.svg
+  static const String imagesDuaLipa  = "assets/images/Dua-lipa 1.svg";
 
   /// Assets for imagesLeftAlignment
   /// assets/images/left_alignment.png
@@ -21,6 +37,10 @@ class Assets {
   /// Assets for imagesLoopActive
   /// assets/images/loop_active.png
   static const String imagesLoopActive = "assets/images/loop_active.png";
+
+  /// Assets for imagesMarshmello 1
+  /// assets/images/marshmello 1.svg
+  static const String imagesMarshmello1 = "assets/images/marshmello 1.svg";
 
   /// Assets for imagesNext
   /// assets/images/next.png
