@@ -7,13 +7,13 @@ class PlayMusicViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Column(
         children: [
-          SizedBox(height: 98),
-          CustomSongsDetailsPlayMusic(),
-          SizedBox(height: 28),
-          CustomButtonControllorPlayMusic(),
+          const SizedBox(height: 98),
+          const CustomSongsDetailsPlayMusic(),
+          const SizedBox(height: 28),
+          CustomButtonControllorPlayMusic(value: 0.6, onChanged: (p0) {}),
         ],
       ),
     );
