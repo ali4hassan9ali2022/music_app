@@ -3,19 +3,22 @@ import 'package:music_app/Core/Utils/app_styles.dart';
 import 'package:music_app/Core/Utils/assets.dart';
 
 class CustomSongsDetailsItem extends StatelessWidget {
-  const CustomSongsDetailsItem({super.key});
-
+  const CustomSongsDetailsItem({super.key, required this.onTap});
+final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const CustomSongsImage(),
-        const SizedBox(height: 9),
-        Text("Who Says", style: AppStyles.styleMedium15(context)),
-        const SizedBox(height: 4),
-        Text("Selena Gomez", style: AppStyles.styleMedium12(context)),
-      ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const CustomSongsImage(),
+          const SizedBox(height: 9),
+          Text("Who Says", style: AppStyles.styleMedium15(context)),
+          const SizedBox(height: 4),
+          Text("Selena Gomez", style: AppStyles.styleMedium12(context)),
+        ],
+      ),
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:music_app/Core/Utils/app_router.dart';
 import 'package:music_app/Features/Home/Presentation/Views/Widgets/custom_songs_details_item.dart';
 
 class CustomSongsDetailsListView extends StatelessWidget {
@@ -16,7 +18,11 @@ class CustomSongsDetailsListView extends StatelessWidget {
           },
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return const CustomSongsDetailsItem();
+            return CustomSongsDetailsItem(
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kPlayView);
+              },
+            );
           },
           itemCount: 10,
         ),
