@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:music_app/Core/Utils/app_styles.dart';
 import 'package:music_app/Core/Utils/assets.dart';
 
-class CustomSongsDetailsPlay extends StatelessWidget {
-  const CustomSongsDetailsPlay({super.key});
+class CustomSongsDetailsPlayMusic extends StatelessWidget {
+  const CustomSongsDetailsPlayMusic({super.key});
 
   @override
   Widget build(BuildContext context) {
